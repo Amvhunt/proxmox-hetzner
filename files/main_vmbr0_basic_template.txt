@@ -24,15 +24,15 @@ iface vmbr0 inet static
     gateway #MAIN_IPV4_GW#
     bridge-ports #IFACE_NAME#
     bridge-stp off
-    bridge-fd 1
-    bridge-vlan-aware yes
-    bridge-vids 2-4094
+    bridge-fd 0
     hwaddress #MAIN_MAC_ADDR#
     pointopoint #MAIN_IPV4_GW#
     up sysctl -p
-
-iface vmbr0 inet6 static
-    address #MAIN_IPV6_CIDR#
-    gateway fe80::1
-
+    
+auto vmbr1
+iface vmbr1 inet static
+        address 192.168.0.1/24
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
 
