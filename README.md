@@ -64,7 +64,7 @@
 #### Install requirements and Install Proxmox:
 ```shell
 apt -y install ovmf wget 
-wget -O pve.iso http://download.proxmox.com/iso/proxmox-ve_7.3-1.iso
+wget -O pve.iso http://download.proxmox.com/iso/proxmox-ve_7.4-1.iso
 ```
 * For initial proxmox installer via `VNC` :
 ```shell
